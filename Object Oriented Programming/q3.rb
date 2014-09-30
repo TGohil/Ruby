@@ -1,17 +1,17 @@
 require 'pry'
-require 'date'
 
 class Person
-    attr_accessor :dob, :first_name, :surname, :emails, :phone_numbers
+    attr_accessor :dob, :first_name, :surname, :emails, :phone_numbers, :relationship
     
     
     
-    def initialize(firstname = "joe", lastname = "bloggs", dob = "01/01/1990")
+    def initialize(firstname = "joe", lastname = "bloggs", dob = "01/01/1990", rel = "mum")
         @first_name = firstname
         @surname = lastname
-        @dob = Date.parse (dob)
+        @dob = dob
         @emails = []
         @phone_numbers = []
+        @relationship = rel
     end
     
     
@@ -49,7 +49,7 @@ class Person
         puts @first_name.capitalize + " " + @surname.capitalize
         puts ' '
         
-        puts 'Date of Birth: ' + dob.strftime("%Y,%m,%d")
+        puts 'Date of Birth: ' + @dob
         
         puts ' '
         puts 'Email Addresses: '
@@ -66,6 +66,28 @@ class Person
         end
     end
 
+    
+end
+
+
+class Familymember < Person
+
+    def initialize(rel = "dad")
+        @isrelated = true
+        super
+    end
+    
+    def changerel=(rel)
+        @relationship = rel
+    end
+    
+    def happy
+        if (rel = "dad")
+            return "We are Related!"
+        else
+            return "WHO ARE YOU"
+        end
+    end
     
 end
 
