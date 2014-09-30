@@ -5,7 +5,7 @@ class Person
     
     
     
-    def initialize(firstname = "joe", lastname = "bloggs", dob = "01/04/1991")
+    def initialize(firstname = "joe", lastname = "bloggs", dob = "01/01/1990")
         @first_name = firstname
         @surname = lastname
         @dob = dob
@@ -38,6 +38,25 @@ class Person
     
     def to_s
         "#{@first_name} was born on #{@dob}. \n Their email addresses are: #{@emails}. \n Their phone numbers are #{@phone_numbers}"
+    end
+    
+    def print_details
+        puts @first_name.capitalize + " " + @surname.capitalize
+        puts ' '
+        
+        puts @dob
+        
+        puts ' '
+        
+        emails.each do |e|
+            puts e.to_s
+        end
+        
+        puts ' '
+        
+        phone_numbers.each do |p|
+            puts p.to_s
+        end
     end
 
     
