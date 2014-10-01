@@ -92,8 +92,19 @@ class Familymember < Person
 end
 
 
-class AddressBook
+class Address
+    attr_accessor :lists
     
+    def initialize(list)
+        @lists = list
+        list = []
+        super
+    end
+    
+    def add (person)
+        list.push (person)
+    end
 end
+
 
 binding.pry
