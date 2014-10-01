@@ -37,7 +37,7 @@ class Person
     end
     
     def to_s
-        "#{@first_name} was born on #{@dob}. \n Their email addresses are: #{@emails}. \n Their phone numbers are #{@phone_numbers}"
+        "#{@first_name} was born on #{@dob}.\n Their email addresses are: #{@emails}.\n Their phone numbers are #{@phone_numbers}"
     end
 
     

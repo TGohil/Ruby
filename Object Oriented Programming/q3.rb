@@ -72,7 +72,7 @@ end
 
 class Familymember < Person
 
-    def initialize(rel = "dad")
+    def initialize(rel = "dad") # *args - can use for any other arguments, must be put last.
         @isrelated = true
         super
     end
