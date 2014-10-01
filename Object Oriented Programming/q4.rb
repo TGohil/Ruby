@@ -70,10 +70,10 @@ class Person
 end
 
 
+#Familymember class, child of Person
 class Familymember < Person
 
     def initialize(rel = "dad")
-        @isrelated = true
         super
     end
     
@@ -88,6 +88,11 @@ class Familymember < Person
             return "WHO ARE YOU"
         end
     end
+    
+end
+
+
+class AddressBook
     
 end
 
