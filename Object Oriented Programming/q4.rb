@@ -40,9 +40,9 @@ class Person
     end
     
     #overwrite the to_s method
-    def to_s
-        "#{@first_name} was born on #{@dob}. \n Their email addresses are: #{@emails}. \n Their phone numbers are #{@phone_numbers}"
-    end
+#    def to_s
+#        "#{@first_name} was born on #{@dob}. \n Their email addresses are: #{@emails}. \n Their phone numbers are #{@phone_numbers}"
+#    end
     
     #print details
     def print_details
@@ -82,7 +82,7 @@ class Familymember < Person
     end
     
     def happy
-        if (rel = "dad")
+        if (rel == "dad")
             return "We are Related!"
         else
             return "WHO ARE YOU"
@@ -93,16 +93,17 @@ end
 
 
 class Address
-    attr_accessor :lists
     
-    def initialize(list)
-        @lists = list
-        list = []
-        super
+    def initialize
+        @lists = []
     end
     
     def add (person)
-        list.push (person)
+        @lists.push (person)
+    end
+    
+    def lists
+        return @lists
     end
 end
 
