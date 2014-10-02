@@ -45,6 +45,18 @@ class FamilyMember < Person
     
 end
 
-class AddressBook
+class Addressbook
+    
+    def initialize
+        @lists = []
+    end
 
+    def add (person)
+        @lists.push (person)
+    end
+
+    def list
+        return @lists
+    end
+    
 end

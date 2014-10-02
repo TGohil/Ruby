@@ -92,7 +92,7 @@ class Familymember < Person
 end
 
 
-class Address
+class Addressbook
     
     def initialize
         @lists = []
@@ -102,7 +102,7 @@ class Address
         @lists.push (person)
     end
     
-    def lists
+    def list
         return @lists
     end
 end

@@ -10,4 +10,6 @@ describe "The FamilyMember Class" do
         #is_a? is asking if the left is the thing on the right
         expect(trishul.is_a? Person)
     end
+
+    
 end
