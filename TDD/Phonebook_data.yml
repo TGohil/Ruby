@@ -1,0 +1,24 @@
+:people:
+  - :fname: Trishul
+    :surname: Gohil
+    :dob: 1 Apr 1991
+    :email:
+      - trishulgohil@hotmail.com
+      - trishulgohil@live.co.uk
+    :phones:
+      - 078 540 15007
+      - 020 123 45678 
+  - :fname: David
+    :surname: Kent
+    :dob: 25 Nov 1990
+    :emails:
+      - dkent@testingcircle.com
+    :phones:
+      - 0202345678
+  - :fname: Abi
+    :surname: Olidontknow
+    :dob: 4 Oct 1991
+    :emails:
+      - Aoli@testingcircle.com
+    :phones:
+      - 020 789 45615

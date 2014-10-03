@@ -99,7 +99,11 @@ class Addressbook
     end
     
     def add (person)
-        @lists.push (person)
+        if person.is_a? Person
+            @lists << person
+        else
+            raise "Only objects that are relate to class Person can only be entered in the address book."
+        end
     end
     
     def list

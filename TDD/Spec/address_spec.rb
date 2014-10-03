@@ -14,8 +14,16 @@ describe "The Address Class" do
         
         expect(book.list).to eq([person1, person2])
         
+        end
+
+    
+    it "Should load yaml file" do
+        book = Addressbook.new
+        book.load_yaml('Phonebook_data.yml')
         
+        expect(book.list).to eq([])
         
+        expect(book.load_yaml[:people].length).to eq(3)
     end
     
 end
